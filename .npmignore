@@ -1,2 +1,14 @@
-node_modules/
-test/
+# source
+**/*.ts
+*.ts
+
+# definitions
+!**/*.d.ts
+!*.d.ts
+
+# configuration
+jest.config.json
+package-lock.json
+tslint.json
+tsconfig.json
+.prettierrc
