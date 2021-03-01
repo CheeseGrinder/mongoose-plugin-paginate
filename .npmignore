@@ -7,8 +7,13 @@
 !*.d.ts
 
 # configuration
+.prettierrc
 jest.config.json
 package-lock.json
-tslint.json
 tsconfig.json
-.prettierrc
+
+#GitHub
+.github/
+
+#Test
+test/

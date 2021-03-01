@@ -1,24 +1,25 @@
 {
-  "name": "@cheese-grinder/mongoose-paginate",
-  "version": "1.0.0",
+  "name": "mongoose-plugin-paginate",
+  "version": "1.0.0-pre2",
   "description": "Pagination plugin for mongoose",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "prepare": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CheeseGrinder/mongoose-paginate.git"
+    "url": "git+https://github.com/CheeseGrinder/mongoose-plugin-paginate.git"
   },
   "author": "CheeseGrinder",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/CheeseGrinder/mongoose-paginate/issues"
+    "url": "https://github.com/CheeseGrinder/mongoose-plugin-paginate/issues"
   },
-  "homepage": "https://github.com/CheeseGrinder/mongoose-paginate#readme",
+  "homepage": "https://github.com/CheeseGrinder/mongoose-plugin-paginate#readme",
   "dependencies": {
     "mongoose": "^5.11.18"
   },
