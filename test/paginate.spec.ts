@@ -28,9 +28,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(0);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(0);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(1);
+        expect(received.page).toBe(1);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(10);
         expect(received.pagesCount).toBeDefined();
@@ -72,9 +70,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(2);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(0);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(1);
+        expect(received.page).toBe(1);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(10);
         expect(received.pagesCount).toBeDefined();
@@ -131,9 +127,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(2);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(0);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(1);
+        expect(received.page).toBe(1);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(10);
         expect(received.pagesCount).toBeDefined();
@@ -210,9 +204,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(2);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(0);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(1);
+        expect(received.page).toBe(1);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(10);
         expect(received.pagesCount).toBeDefined();
@@ -226,7 +218,7 @@ describe('Plugin: mongoose paginate', () => {
     it('should be returns collection of video paginated: should be doesnt have prev page & has next page', async () => {
         await VideoModel.create({ name: 'video_1' }, { name: 'video_2' }, { name: 'video_3' } );
 
-        const received = await VideoModel.paginate({ limit: 1, page: 0 });
+        const received = await VideoModel.paginate({ limit: 1, page: 1 });
 
         expect(received).toBeTruthy();
         expect(received).toBeInstanceOf(Object);
@@ -245,9 +237,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(3);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(0);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(1);
+        expect(received.page).toBe(1);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(1);
         expect(received.pagesCount).toBeDefined();
@@ -261,7 +251,7 @@ describe('Plugin: mongoose paginate', () => {
     it('should be returns collection of video paginated: should have prev & next page', async () => {
         await VideoModel.create({ name: 'video_1' }, { name: 'video_2' }, { name: 'video_3' } );
 
-        const received = await VideoModel.paginate({ limit: 1, page: 1 });
+        const received = await VideoModel.paginate({ limit: 1, page: 2 });
 
         expect(received).toBeTruthy();
         expect(received).toBeInstanceOf(Object);
@@ -280,9 +270,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(3);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(1);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(2);
+        expect(received.page).toBe(2);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(1);
         expect(received.pagesCount).toBeDefined();
@@ -296,7 +284,7 @@ describe('Plugin: mongoose paginate', () => {
     it('should be returns collection of video paginated: should have prev & doesnt have next page', async () => {
         await VideoModel.create({ name: 'video_1' }, { name: 'video_2' }, { name: 'video_3' } );
 
-        const received = await VideoModel.paginate({ limit: 1, page: 2 });
+        const received = await VideoModel.paginate({ limit: 1, page: 3 });
 
         expect(received).toBeTruthy();
         expect(received).toBeInstanceOf(Object);
@@ -315,9 +303,7 @@ describe('Plugin: mongoose paginate', () => {
         expect(received.docsCount).toBeDefined();
         expect(received.docsCount).toBe(3);
         expect(received.page).toBeDefined();
-        expect(received.page).toBe(2);
-        expect(received.logicalPage).toBeDefined();
-        expect(received.logicalPage).toBe(3);
+        expect(received.page).toBe(3);
         expect(received.limit).toBeDefined();
         expect(received.limit).toBe(1);
         expect(received.pagesCount).toBeDefined();

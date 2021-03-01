@@ -1,20 +1,15 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "declaration": true,
-      "removeComments": true,
-      "allowSyntheticDefaultImports": true,
-      "target": "es2017",
-      "sourceMap": true,
-      "outDir": "./dist",
-      "baseUrl": "./",
-      "incremental": true,
-      "preserveConstEnums": true
-    },
-    "exclude": [
-      "node_modules/",
-      "dist/",
-      "test/"
-    ]
-  }
-  
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "skipLibCheck": true,
+    "importHelpers": true,
+    "removeComments": false,
+    "noLib": false,
+    "target": "es2017",
+    "sourceMap": false,
+    "allowJs": false,
+    "strictNullChecks": false
+  },
+  "exclude": ["node_modules", "test"]
+}
