@@ -7,7 +7,7 @@
     "noLib": false,
     "target": "es2017",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": ".",
     "allowJs": false,
     "strictNullChecks": false
   },
