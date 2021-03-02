@@ -1,5 +1,5 @@
-import { Document, model, PaginateModel, Schema } from 'mongoose';
-import mongoosePaginate from '../../src';
+import { Document, Model, model, PaginateModel, Schema } from 'mongoose';
+import { mongoosePaginate } from '../../src';
 
 export interface Tag extends Document {
     name: string;
@@ -15,7 +15,7 @@ export const TagsSchema = new Schema<Tag>({
     name: { type: String },
     description: { type: String }
 });
-export const TagModel = model('Tag', TagsSchema);
+export const TagModel: Model<Tag> = model('Tag', TagsSchema);
 
 export const VideoSchema = new Schema<Video>({
     name: { type: String },
