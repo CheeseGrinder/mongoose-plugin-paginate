@@ -1,6 +1,6 @@
 {
   "name": "mongoose-plugin-paginate",
-  "version": "1.0.0-pre7",
+  "version": "1.0.0",
   "description": "Pagination plugin for mongoose",
   "main": "dist/index.js",
   "scripts": {
