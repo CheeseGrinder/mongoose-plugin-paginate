@@ -3,18 +3,16 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
 
 let mongod: MongoMemoryServer;
 
-export const openMongodConnection = async (options: ConnectOptions = {}) => {
-    mongod = new MongoMemoryServer();
-    await connect(await mongod.getUri(), { 
-        ...options,
-        useUnifiedTopology: true,
-        useNewUrlParser: true
-    });
+export async function openMongodConnection(options: ConnectOptions = {}): Promise<void> {
+  mongod = new MongoMemoryServer();
+  await connect(await mongod.getUri(), {
+    ...options,
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+  });
 }
 
-
-export const closeMongodConnection = async () => {
-    await disconnect();
-    if (mongod) await mongod.stop();
-  };
-  
+export async function closeMongodConnection(): Promise<void> {
+  await disconnect();
+  await mongod?.stop();
+}

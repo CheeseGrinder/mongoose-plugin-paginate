@@ -1,10 +1,18 @@
 {
   "name": "mongoose-plugin-paginate",
-  "version": "1.0.0",
+  "version": "2.0.0-pre.1",
   "description": "Pagination plugin for mongoose",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
-    "prepare": "tsc",
+    "build": "tsc -b tsconfig.build.json",
+    "start": "tsc",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "check": "prettier --check \"{src,test}/**/*.ts\"",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
@@ -13,15 +21,32 @@
     "type": "git",
     "url": "git+https://github.com/CheeseGrinder/mongoose-plugin-paginate.git"
   },
-  "author": "CheeseGrinder",
-  "license": "GPL-3.0",
+  "keywords": [
+    "typescript",
+    "mongo-db",
+    "mongoose",
+    "mongoose-plugin",
+    "mongoose-pagination"
+  ],
+  "author": {
+    "name": "CheeseGrinder",
+    "email": "devs.cheese@gmail.com"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CheeseGrinder/mongoose-plugin-paginate/issues"
   },
   "homepage": "https://github.com/CheeseGrinder/mongoose-plugin-paginate#readme",
+  "dependencies": {
+    "ts-node": "^10.2.1"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
     "jest": "^26.6.3",
+    "prettier": "^2.3.2",
     "mongodb-memory-server": "^6.9.3",
     "mongoose": "^5.11.18",
     "ts-jest": "^26.5.2",

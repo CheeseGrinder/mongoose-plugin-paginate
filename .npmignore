@@ -7,10 +7,11 @@
 !*.d.ts
 
 # configuration
+.eslintrc
 .prettierrc
+tsconfig.json
 jest.config.json
 package-lock.json
-tsconfig.json
 
 #GitHub
 .github/

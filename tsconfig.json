@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "allowUnreachableCode": false,
     "declaration": true,
-    "skipLibCheck": true,
-    "removeComments": false,
-    "noLib": false,
-    "target": "es2017",
     "sourceMap": true,
-    "outDir": "dist",
-    "allowJs": false,
-    "strictNullChecks": false
+
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "baseUrl": "src",
+    "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "test"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "*.config.(t|j)s"
+  ]
 }
